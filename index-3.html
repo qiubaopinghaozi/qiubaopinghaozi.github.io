@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Special Offers</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/normalize1.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!--卓别林-->
+    <style>
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+</style>
+
+    <style>
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.container > header,
+.codrops-top {
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+.container > header {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+	background: rgba(0,0,0,0.01);
+}
+
+.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.container > header span {
+	display: block;
+	font-size: 60%;
+	opacity: 0.7;
+	padding: 0 0 0.6em 0.1em;
+}
+
+/* To Navigation Style */
+.codrops-top {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.6);
+	text-transform: uppercase;
+	width: 100%;
+	font-size: 0.69em;
+	line-height: 2.2;
+}
+
+.codrops-top a {
+	text-decoration: none;
+	padding: 0 1em;
+	letter-spacing: 0.1em;
+	color: #888;
+	display: inline-block;
+}
+
+.codrops-top a:hover {
+	background: rgba(255,255,255,0.95);
+	color: #333;
+}
+
+.codrops-top span.right {
+	float: right;
+}
+
+.codrops-top span.right a {
+	float: left;
+	display: block;
+}
+
+.codrops-icon:before {
+	font-family: 'codropsicons';
+	margin: 0 4px;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
+/* Demo Buttons Style */
+.codrops-demos {
+	padding-top: 1em;
+	font-size: 0.9em;
+}
+
+.codrops-demos a {
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.7em 1.1em;
+	border: 3px solid #b1aea6;
+	color: #b1aea6;
+	font-weight: 700;
+}
+
+.codrops-demos a:hover,
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+	border-color: #89867e;
+	color: #89867e;
+}
+
+@media screen and (max-width: 25em) {
+
+	.codrops-icon span {
+		display: none;
+	}
+
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+	background: #fbc73b;
+	font-family: 'Lato', Arial, sans-serif;
+	color: #fff;
+}
+
+.wrapper {
+	margin: 0 auto 100px auto;
+	max-width: 960px;
+}
+
+.stage {
+	list-style: none;
+	padding: 0;
+}
+
+/*************************************
+Build the scene and rotate on hover
+**************************************/
+
+.scene {
+	width: 260px;
+	height: 400px;
+	margin: 30px;
+	float: left;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.movie {
+	width: 260px;
+	height: 400px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateZ(-130px);
+	-moz-transform: translateZ(-130px);
+	transform: translateZ(-130px);
+	-webkit-transition: -webkit-transform 350ms;
+	-moz-transition: -moz-transform 350ms;
+	transition: transform 350ms;
+}
+
+.movie:hover {
+	-webkit-transform: rotateY(-78deg) translateZ(20px);
+	-moz-transform: rotateY(-78deg) translateZ(20px);
+	transform: rotateY(-78deg) translateZ(20px);
+}
+
+/*************************************
+Transform and style the two planes
+**************************************/
+
+.movie .poster, 
+.movie .info {
+	position: absolute;
+	width: 260px;
+	height: 400px;
+	background-color: #fff;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.movie .poster  {
+	-webkit-transform: translateZ(130px);
+	-moz-transform: translateZ(130px);
+	transform: translateZ(130px);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.movie .info {
+	-webkit-transform: rotateY(90deg) translateZ(130px);
+	-moz-transform: rotateY(90deg) translateZ(130px);
+	transform: rotateY(90deg) translateZ(130px);
+	border: 1px solid #B8B5B5;
+	font-size: 0.75em;
+}
+
+/*************************************
+Shadow beneath the 3D object
+**************************************/
+
+.csstransforms3d .movie::after {
+	content: '';
+	width: 260px;
+	height: 260px;
+	position: absolute;
+	bottom: 0;
+	box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	-webkit-transform: rotateX(90deg) translateY(130px);
+	-moz-transform: rotateX(90deg) translateY(130px);
+	transform: rotateX(90deg) translateY(130px);
+	-webkit-transition: box-shadow 350ms;
+	-moz-transition: box-shadow 350ms;
+	transition: box-shadow 350ms;
+}
+
+.csstransforms3d .movie:hover::after {
+	box-shadow: 20px -5px 50px rgba(0,0,0,0.3);
+}
+
+/*************************************
+Movie information
+**************************************/
+
+.info header {
+	color: #FFF;
+	padding: 7px 10px;
+	font-weight: bold;
+	height: 195px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	text-shadow: 0px 1px 1px rgba(0,0,0,1);
+}
+
+.info header h1 {
+	margin: 0 0 2px;
+	font-size: 1.4em;
+}
+
+.info header .rating {
+	border: 1px solid #FFF;
+	padding: 0px 3px;
+}
+
+.info p {
+	padding: 1.2em 1.4em;
+	margin: 2px 0 0;
+	font-weight: 700;
+	color: #666;
+	line-height: 1.4em;
+	border-top: 10px solid #555;
+}
+
+/*************************************
+Generate "lighting" using box shadows
+**************************************/
+
+.movie .poster,
+.movie .info,
+.movie .info header {
+	-webkit-transition: box-shadow 350ms;
+	-moz-transition: box-shadow 350ms;
+	transition: box-shadow 350ms;
+}
+
+.csstransforms3d .movie .poster {
+	box-shadow: inset 0px 0px 40px rgba(255,255,255,0);
+}
+
+.csstransforms3d .movie:hover .poster {
+	box-shadow: inset 300px 0px 40px rgba(255,255,255,0.8);
+}
+
+.csstransforms3d .movie .info, 
+.csstransforms3d .movie .info header {
+	box-shadow: inset -300px 0px 40px rgba(0,0,0,0.5);
+}
+
+.csstransforms3d .movie:hover .info, 
+.csstransforms3d .movie:hover .info header {
+	box-shadow: inset 0px 0px 40px rgba(0,0,0,0);
+}
+
+/*************************************
+Posters and still images
+**************************************/
+
+.scene:nth-child(1) .movie .poster {
+  background-image: url(images/4121.jpg);
+}
+
+.scene:nth-child(2) .poster {
+  background-image: url(images/421.jpg);
+}
+
+.scene:nth-child(3) .poster {
+  background-image: url(images/431.jpg);
+}
+
+.scene:nth-child(1) .info header {
+	background-image: url(images/4122.jpg);
+}
+
+.scene:nth-child(2) .info header {
+	background-image: url(images/422.jpg);
+}
+
+.scene:nth-child(3) .info header {
+	background-image: url(images/432.jpg);
+}
+
+/*************************************
+Fallback
+**************************************/
+.no-csstransforms3d .movie .poster, 
+.no-csstransforms3d .movie .info {
+	position: relative;
+}
+
+/*************************************
+Media Queries
+**************************************/
+@media screen and (max-width: 60.75em){
+	.scene {
+		float: none;
+		margin: 30px auto 60px;
+	}
+}
+
+</style>
+
+    <script src="js/prefixfree.min.js"></script>
+
+    <script src="js/modernizr.js"></script>
+    <!-- 卓别林结束-->
+    <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+    
+    
+    <link rel="stylesheet" href="css/base.css"> <!--初始化文件-->
+    <link rel="stylesheet" href="css/menu.css"> <!--主样式-->
+    <script src="js/menu.js"></script> <!--控制js-->
+    <script src="js/adapter.js"></script> <!--rem适配js-->
+    <script>
+        $(document).ready(function(){
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+    <!--[if lt IE 8]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+    </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+<!--==============================header=================================-->
+<header>
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="menu_block">
+                <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+                    <ul class="sf-menu">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index-1.html">旅游景点</a></li>
+                        <li class="current"><a href="index-2.html">北欧风光</a></li>
+                        <li><a href="index-3.html">国内旅游</a></li>
+                        <li><a href="index-4.html">浩子页面</a></li>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="grid_12">
+            <h1>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Your Happy Family">
+                </a>
+            </h1>
+        </div>
+    </div>
+</header>
+<!--==============================Content=================================-->
+<div class="content" style="height:500px;"><!--卓别林代码-->
+    <div style="background-color:#000; width: 82.8%;height:124%;float:right;">
+ <div class="container">
+			<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+			<div class="wrapper">
+				<ul class="stage clearfix">
+
+					<li class="scene">
+						<div class="movie" onclick="return true">
+							<div class="poster"></div>
+							<div class="info">
+								<header>
+									<h1><!--It's a Wonderful Life--></h1>
+									<span class="year"><!--1946--></span>
+									<span class="rating"><!--PG--></span>
+									<span class="duration"><!--130 minutes--></span>
+								</header>
+	<p>							<!--
+									In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled. Prayers for his well-being from friends and family reach Heaven. Clarence Odbody, Angel Second Class, is assigned to visit Earth to save George, thereby earning his wings. Franklin and Joseph, the head angels, review George's life with Clarence.-->
+								
+							</div>
+						</div>
+					</li>
+
+					<li class="scene">
+						<div class="movie" onclick="return true">
+							<div class="poster"></div>
+							<div class="info">
+								<header>
+									<h1>Vengeance Valley</h1>
+									<span class="year">1951</span>
+									<span class="rating">NR</span>
+									<span class="duration">83 minutes</span>
+								</header>
+								<!--<p>
+									A cattle baron takes in an orphaned boy and raises him, causing his own son to resent the boy. As they get older the resentment festers into hatred, and eventually the real son frames his stepbrother for fathering an illegitimate child that is actually his, seeing it as an opportunity to get his half-brother out of the way so he can have his father's empire all to himself.
+								</p>-->
+							</div>
+						</div>
+					</li>
+
+					<li class="scene">
+						<div class="movie" onclick="return true">
+							<div class="poster"></div>
+							<div class="info">
+								<header>
+									<h1><!--The Gold Rush--></h1>
+									<span class="year"><!--1925--></span>
+									<span class="rating"><!--NR--></span>
+									<span class="duration"><!--95 minutes--></span>
+								</header>
+								<p>
+									<!--The Tramp travels to the Yukon to take part in the Klondike Gold Rush. He gets mixed up with some burly characters and falls in love with the beautiful Georgia. He tries to win her heart with his singular charm.-->
+								</p>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div><!-- /wrapper -->
+		</div><!-- /container -->
+    </div>
+    <div id="menu" style="height:620px;">
+        <!--隐藏菜单-->
+        <div id="ensconce">
+            <h2>
+                <img src="images/show.png" alt="国内各地景点">
+                国内各地景点
+            </h2>
+        </div>
+        <!--显示菜单-->
+        <div id="open">
+            <div class="navH">
+                国内各地景点
+                <span><img class="obscure" src="images/obscure.png" alt=""></span>
+            </div>
+            <div class="navBox">
+                <ul>
+                    <li>
+                        <h2 class="obtain">北京景点<i></i></h2>
+                        <div class="secondary">
+                            <h3>故宫</h3>
+                            <h3>十三陵</h3>
+                            <h3>圆明园</h3>
+                            <h3>长城</h3>
+                            <h3>雍和宫</h3>
+                            <h3>天坛公园</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="obtain">南京景点<i></i></h2>
+                        <div class="secondary">
+                            <h3>栖霞寺</h3>
+                            <h3>夫子庙</h3>
+                            <h3>海底世界</h3>
+                            <h3>中山陵</h3>
+                            <h3>乌衣巷</h3>
+                            <h3>音乐台</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="obtain">上海景点<i></i></h2>
+                        <div class="secondary">
+                            <h3>东方明珠</h3>
+                            <h3>外滩</h3>
+                            <h3>豫园</h3>
+                            <h3>文庙</h3>
+                            <h3>世博园</h3>
+                            <h3>田子坊</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="obtain">深圳景点<i></i></h2>
+                        <div class="secondary">
+                            <h3>华侨城</h3>
+                            <h3>观澜湖</h3>
+                            <h3>世界之窗</h3>
+                            <h3>东门老街</h3>
+                            <h3>七娘山</h3>
+                            <h3>光明农场</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="obtain">安徽景点<i></i></h2>
+                        <div class="secondary">
+                            <h3>黄山</h3>
+                            <h3>宏村</h3>
+                            <h3>九华山</h3>
+                            <h3>合肥</h3>
+                            <h3>天柱山</h3>
+                            <h3>巢湖</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="obtain">杭州景点<i></i></h2>
+                        <div class="secondary">
+                            <h3>西湖</h3>
+                            <h3>灵隐寺</h3>
+                            <h3>千岛湖</h3>
+                            <h3>钱塘江</h3>
+                            <h3>龙井问茶</h3>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="obtain">云南<i></i></h2>
+                        <div class="secondary">
+                            <h3>丽江</h3>
+                            <h3>大理古城</h3>
+                            <h3>粉色沙滩</h3>
+                            <h3>凤凰古城</h3>
+                            <h3>武当山</h3>
+                            <h3>梅里雪山</h3>
+                            <h3>昆明八景</h3>
+                            
+                        </div>
+                    </li>
+   
+ 
+                    
+
+                    <li>
+                        <h2 class="obtain">广州景点<i></i></h2>
+                        <div class="secondary">
+                            <h3>白云山</h3>
+                            <h3>长隆</h3>
+                            <h3>黄花岗公园</h3>
+                            <h3>中山纪念堂</h3>
+                            <h3>华南植物园</h3>
+                            <h3>南沙湿地公园</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--==============================footer=================================-->
+<footer style="margin-top: 0px;height:100px;">
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="socials">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google-plus"></a>
+            </div>
+            <div class="copy">
+            <!--    Your Trip (c) 2014 | <a href="#">Privacy Policy</a> | Website Template Collect from <a href="http://www.cssmoban.com/" rel="nofollow">cssmoban.com</a>-->
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    $(function (){
+        $('#bookingForm').bookingForm({
+            ownerEmail: '#'
+        });
+    })
+</script>
+</body>
+</html>
